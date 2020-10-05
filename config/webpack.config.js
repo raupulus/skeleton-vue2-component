@@ -10,7 +10,7 @@ module.exports = {
   entry: path.resolve(__dirname + './../src/index.js'),
   output: {
     path: path.resolve(__dirname + './../dist'),
-    filename: 'v-weather-chipiona.js'
+    filename: 'v-component.js'
   },
   module: {
     rules: [
@@ -38,7 +38,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf|svg|webp|wav|mp3|ogg)$/, 
+        test: /\.(png|gif|jpe?g|woff|woff2|eot|ttf|otf|svg|webp|wav|mp3|ogg)$/, 
         use: "file-loader" 
       },
       {
@@ -89,7 +89,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-        /*
+    /*
     new CopyPlugin({
       patterns: [
         {
@@ -101,7 +101,7 @@ module.exports = {
         concurrency: 100,
       },
     }),
-        */
+    */
 
     new IgnoreAssetsPlugin({
       //ignore: 'asset.js'
